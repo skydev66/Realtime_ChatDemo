@@ -38,4 +38,5 @@ app.use(function(req, res, next) {
   res.status(404).sendFile(process.cwd() + '/app/views/404.htm');
 });
 
+//Waiting for the server
 ioServer.listen(port);
