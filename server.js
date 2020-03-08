@@ -31,6 +31,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 app.use(flash());
 
+//Initialize routing
 app.use('/', routes);
 
 // Middleware to catch 404 errors
