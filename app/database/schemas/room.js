@@ -12,6 +12,6 @@ var RoomSchema = new Mongoose.Schema({
     connections: { type: [{ userId: String, socketId: String }]}
 });
 
+//Set Room Model Variable
 var roomModel = Mongoose.model('room', RoomSchema);
-
 module.exports = roomModel;

@@ -3,6 +3,7 @@
 var Mongoose 	= require('mongoose');
 var bcrypt      = require('bcrypt-nodejs');
 
+//Set User picture and Work Factor
 const SALT_WORK_FACTOR = 10;
 const DEFAULT_USER_PICTURE = "/img/user.jpg";
 
@@ -15,6 +16,8 @@ const DEFAULT_USER_PICTURE = "/img/user.jpg";
  * 2. Hash user's password
  *
  */
+
+ //User Schema
 var UserSchema = new Mongoose.Schema({
     username: { type: String, required: true},
     password: { type: String, default: null },
