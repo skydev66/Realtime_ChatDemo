@@ -1,5 +1,6 @@
 'use strict';
 
+//Import Winston library
 var winston = require('winston');
 
 var logger = new (winston.Logger)({
@@ -19,4 +20,5 @@ var logger = new (winston.Logger)({
 	exitOnError: false
 });
 
+//Export this model
 module.exports = logger;

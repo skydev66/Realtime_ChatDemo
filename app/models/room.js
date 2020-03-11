@@ -1,5 +1,6 @@
 'use strict';
 
+//Import database and user
 var roomModel   = require('../database').models.room;
 var User 		= require('../models/user');
 
