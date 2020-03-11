@@ -31,6 +31,7 @@ var init = function(){
 	// Plug-in Local Strategy
 	passport.use(new LocalStrategy(
 	  function(username, password, done) {
+		//Find user that matches the password
 	    User.findOne({ username: new RegExp(username, 'i'), socialId: null }, function(err, user) {
 	      if (err) { return done(err); }
 
@@ -38,6 +39,7 @@ var init = function(){
 	        return done(null, false, { message: 'Incorrect username or password.' });
 	      }
 
+		  //Check Validate password
 	      user.validatePassword(password, function(err, isMatch) {
 	        	if (err) { return done(err); }
 	        	if (!isMatch){
